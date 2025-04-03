@@ -18,6 +18,8 @@ ldconfig
 
 dpdk-hugepages.py -p 2M --setup 2G (setup huge page)
 
+modprobe uio_pci_generic
+
 dpdk-devbind.py --bind=uio_pci_generic 01:00.0 (bind NIC https://dpdk-guide.gitlab.io/dpdk-guide/setup/binding.html)
 
 ```
